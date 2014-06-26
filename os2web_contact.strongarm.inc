@@ -27,6 +27,9 @@ function os2web_contact_strongarm() {
         'workbench_access' => array(
           'weight' => '8',
         ),
+        'metatags' => array(
+          'weight' => '40',
+        ),
       ),
       'display' => array(),
     ),
