@@ -3,13 +3,16 @@ OS2Web Contact
 
 Description
 -----------
-This module provides a contenttype and view to displaycontact info on
-each department.
+This module provides a contenttype and view to display contact info on
+each department. Enable the submodule os2web_contact_advanced to add more
+details to your contact nodes.
+
+Generates a block to put in to your eg. sidebar, the block automatically finds
+the nearest contact block from the current page's parent nodes or it self.
 
 Dependencies
 -----------
 
-- context
 - ctools
 - features
 - field_group
@@ -18,8 +21,6 @@ Dependencies
 - options
 - os2web_base
 - strongarm
-- views
-- views_content
 
 Installation
 -----------
