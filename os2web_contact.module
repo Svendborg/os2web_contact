@@ -21,7 +21,9 @@ function os2web_contact_get_block() {
     }
     if ($path[0] === 'taxonomy' && $path[1] === 'term') {
       $ent = taxonomy_term_load($path[2]);
-      $field = field_get_items('taxonomy_term', $ent, 'field_os2web_base_field_contact');
+      if ($ent) {
+        $field = field_get_items('taxonomy_term', $ent, 'field_os2web_base_field_contact');
+      }
     }
     elseif ($path[0] === 'node') {
       if (isset($path[1]) && is_numeric($path[1])) {
@@ -60,7 +62,6 @@ function os2web_contact_block_info() {
  */
 function os2web_contact_block_view($delta = '') {
   $block = array();
-
   switch ($delta) {
     case 'os2web_contact':
       if ($nid = os2web_contact_get_block()) {
